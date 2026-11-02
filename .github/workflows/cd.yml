@@ -63,7 +63,7 @@ jobs:
       # Server Metadata & Docker Build/Push
       - name: Extract Server Metadata (Tags/Labels)
         id: meta-server
-        uses: docker/metadata-action@v5
+        uses: docker/metadata-action@v6
         with:
           images: ${{ env.REGISTRY }}/${{ env.SERVER_IMAGE_NAME }}
           tags: |
@@ -87,7 +87,7 @@ jobs:
       # Web Metadata & Docker Build/Push
       - name: Extract Web Metadata (Tags/Labels)
         id: meta-web
-        uses: docker/metadata-action@v5
+        uses: docker/metadata-action@v6
         with:
           images: ${{ env.REGISTRY }}/${{ env.WEB_IMAGE_NAME }}
           tags: |
